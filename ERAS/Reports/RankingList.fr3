@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ERAS RankingList.fr3 — FastReport template
+  Columns: Rank | Oracle Ref | Surname | Forename | Programme | Score | Status | Notes
+  Dataset band: Rankings (bound to DMRankings.qryRankings)
+-->
+<TfrxReport>
+  <ReportOptions>
+    <Name>RankingList</Name>
+    <Description>ERAS Ranking List Export</Description>
+  </ReportOptions>
+  <ReportPage Name="Page1" PaperWidth="297" PaperHeight="210" Orientation="1">
+    <TfrxReportTitle Name="ReportTitle1" Height="30">
+      <TfrxMemoView Name="lblTitle" Left="0" Top="0" Width="720" Height="25"
+        Text="ERAS Ranking List" Font.Size="14" Font.Style="[fsBold]"/>
+    </TfrxReportTitle>
+    <TfrxColumnHeader Name="ColumnHeader1" Height="20">
+      <TfrxMemoView Name="hRank"      Left="0"   Top="0" Width="50"  Height="18" Text="Rank"       Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="hOracleRef" Left="55"  Top="0" Width="90"  Height="18" Text="Oracle Ref" Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="hSurname"   Left="150" Top="0" Width="110" Height="18" Text="Surname"    Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="hForename"  Left="265" Top="0" Width="110" Height="18" Text="Forename"   Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="hProgramme" Left="380" Top="0" Width="90"  Height="18" Text="Programme"  Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="hScore"     Left="475" Top="0" Width="70"  Height="18" Text="Score"      Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="hStatus"    Left="550" Top="0" Width="90"  Height="18" Text="Status"     Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="hNotes"     Left="645" Top="0" Width="180" Height="18" Text="Notes"      Font.Style="[fsBold]"/>
+    </TfrxColumnHeader>
+    <TfrxMasterData Name="Rankings" Height="16" DataSet="Rankings">
+      <TfrxMemoView Name="fRank"      Left="0"   Top="0" Width="50"  Height="14" Text="[Rankings.&quot;rank_position&quot;]"/>
+      <TfrxMemoView Name="fOracleRef" Left="55"  Top="0" Width="90"  Height="14" Text="[Rankings.&quot;oracle_ref&quot;]"/>
+      <TfrxMemoView Name="fSurname"   Left="150" Top="0" Width="110" Height="14" Text="[Rankings.&quot;surname&quot;]"/>
+      <TfrxMemoView Name="fForename"  Left="265" Top="0" Width="110" Height="14" Text="[Rankings.&quot;forename&quot;]"/>
+      <TfrxMemoView Name="fProgramme" Left="380" Top="0" Width="90"  Height="14" Text="[Rankings.&quot;programme&quot;]"/>
+      <TfrxMemoView Name="fScore"     Left="475" Top="0" Width="70"  Height="14" Text="[Rankings.&quot;score&quot;]"/>
+      <TfrxMemoView Name="fStatus"    Left="550" Top="0" Width="90"  Height="14" Text="[Rankings.&quot;status&quot;]"/>
+      <TfrxMemoView Name="fNotes"     Left="645" Top="0" Width="180" Height="14" Text="[Rankings.&quot;notes&quot;]"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" Height="16">
+      <TfrxMemoView Name="fPageNum" Left="640" Top="0" Width="80" Height="14"
+        Text="Page [PAGE#] of [TOTALPAGES#]"/>
+    </TfrxPageFooter>
+  </ReportPage>
+</TfrxReport>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ERAS ApplicantSummary.fr3 — FastReport template
+  Single applicant summary report.
+  Dataset band: ApplicantDetail (bound to DMOracle.qryApplicantDetail)
+-->
+<TfrxReport>
+  <ReportOptions>
+    <Name>ApplicantSummary</Name>
+    <Description>ERAS Applicant Summary</Description>
+  </ReportOptions>
+  <ReportPage Name="Page1" PaperWidth="210" PaperHeight="297" Orientation="0">
+    <TfrxReportTitle Name="ReportTitle1" Height="40">
+      <TfrxMemoView Name="lblTitle" Left="0" Top="0" Width="540" Height="30"
+        Text="ERAS Applicant Summary" Font.Size="14" Font.Style="[fsBold]"/>
+    </TfrxReportTitle>
+    <TfrxMasterData Name="ApplicantDetail" Height="200" DataSet="ApplicantDetail">
+      <TfrxMemoView Name="lblOracleRef"   Left="0"   Top="10" Width="160" Height="16" Text="Oracle Ref:"        Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="fOracleRef"     Left="170" Top="10" Width="360" Height="16" Text="[ApplicantDetail.&quot;applicant_id&quot;]"/>
+      <TfrxMemoView Name="lblSurname"     Left="0"   Top="30" Width="160" Height="16" Text="Surname:"           Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="fSurname"       Left="170" Top="30" Width="360" Height="16" Text="[ApplicantDetail.&quot;surname&quot;]"/>
+      <TfrxMemoView Name="lblForename"    Left="0"   Top="50" Width="160" Height="16" Text="Forename:"          Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="fForename"      Left="170" Top="50" Width="360" Height="16" Text="[ApplicantDetail.&quot;forename&quot;]"/>
+      <TfrxMemoView Name="lblEmail"       Left="0"   Top="70" Width="160" Height="16" Text="Email:"             Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="fEmail"         Left="170" Top="70" Width="360" Height="16" Text="[ApplicantDetail.&quot;email&quot;]"/>
+      <TfrxMemoView Name="lblProgramme"   Left="0"   Top="90" Width="160" Height="16" Text="Programme:"         Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="fProgramme"     Left="170" Top="90" Width="360" Height="16" Text="[ApplicantDetail.&quot;programme_code&quot;]"/>
+      <TfrxMemoView Name="lblStatus"      Left="0"   Top="110" Width="160" Height="16" Text="App. Status:"      Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="fStatus"        Left="170" Top="110" Width="360" Height="16" Text="[ApplicantDetail.&quot;application_status&quot;]"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" Height="16">
+      <TfrxMemoView Name="fPageNum" Left="460" Top="0" Width="80" Height="14"
+        Text="Page [PAGE#] of [TOTALPAGES#]"/>
+    </TfrxPageFooter>
+  </ReportPage>
+</TfrxReport>
