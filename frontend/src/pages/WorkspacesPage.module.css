@@ -1,0 +1,160 @@
+.pageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.pageHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f4e79;
+}
+
+.primaryBtn {
+  background: #1f4e79;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.primaryBtn:hover {
+  background: #2e86ab;
+}
+
+.dangerBtn {
+  background: transparent;
+  color: #c0392b;
+  border: 1px solid #c0392b;
+  border-radius: 5px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.82rem;
+  transition: background 0.2s;
+}
+
+.dangerBtn:hover {
+  background: #fde8e8;
+}
+
+.linkBtn {
+  background: transparent;
+  color: #2e86ab;
+  border: 1px solid #2e86ab;
+  border-radius: 5px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.82rem;
+  transition: background 0.2s;
+}
+
+.linkBtn:hover {
+  background: #e8f4fd;
+}
+
+.form {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.input {
+  padding: 0.5rem 0.75rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  flex: 1;
+  min-width: 160px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2e86ab;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1a1a2e;
+}
+
+.badge {
+  border-radius: 99px;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.55rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.active {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.archived {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.cardMeta {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.cardDesc {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.cardActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.loading {
+  color: #666;
+}
+
+.empty {
+  color: #888;
+  grid-column: 1 / -1;
+}
+
+.error {
+  color: #c0392b;
+  background: #fde8e8;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+}

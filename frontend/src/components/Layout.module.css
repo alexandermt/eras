@@ -1,0 +1,99 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background: #1f4e79;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  height: 56px;
+  gap: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.brandLogo {
+  font-weight: 900;
+  font-size: 1.35rem;
+  letter-spacing: 2px;
+  color: #7ecef4;
+}
+
+.brandText {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.navLink:hover {
+  color: #fff;
+  border-bottom-color: #7ecef4;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.userName {
+  font-size: 0.88rem;
+  opacity: 0.9;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 99px;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.logoutBtn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.82rem;
+  transition: background 0.2s;
+}
+
+.logoutBtn:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.main {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}

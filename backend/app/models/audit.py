@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from sqlalchemy import Column, Integer, String, DateTime, Text, JSON
 from app.database.mariadb import Base
 
@@ -14,4 +14,4 @@ class AuditLog(Base):
     detail = Column(Text, nullable=True)
     extra = Column(JSON, nullable=True)
     ip_address = Column(String(45), nullable=True)
-    created_at = Column(DateTime, default=datetime.utcnow, nullable=False, index=True)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False, index=True)

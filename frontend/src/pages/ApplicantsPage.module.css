@@ -1,0 +1,111 @@
+.pageHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.pageHeader h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f4e79;
+}
+
+.badge {
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  font-weight: 600;
+}
+
+.filterRow {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.input {
+  padding: 0.45rem 0.7rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  flex: 1;
+  min-width: 140px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2e86ab;
+}
+
+.filterBtn {
+  background: #1f4e79;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 1rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.filterBtn:hover {
+  background: #2e86ab;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+}
+
+.table th {
+  background: #1f4e79;
+  color: #fff;
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 0.6rem 0.9rem;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background: #f7faff;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
+  padding: 2rem;
+}
+
+.loading {
+  color: #666;
+}
+
+.error {
+  color: #c0392b;
+  background: #fde8e8;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+}

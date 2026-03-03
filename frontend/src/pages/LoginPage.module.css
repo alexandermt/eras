@@ -1,0 +1,89 @@
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1f4e79 0%, #2e86ab 100%);
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1f4e79;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  font-size: 0.88rem;
+  margin-top: 0.25rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.input {
+  padding: 0.6rem 0.75rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2e86ab;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 0.85rem;
+  background: #fde8e8;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+}
+
+.button {
+  background: #1f4e79;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.button:hover:not(:disabled) {
+  background: #2e86ab;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -1,0 +1,166 @@
+.breadcrumb {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+  color: #2e86ab;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  border-bottom: 2px solid #e0e7ef;
+  margin-bottom: 1.25rem;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tab:hover {
+  color: #1f4e79;
+}
+
+.activeTab {
+  color: #1f4e79;
+  border-bottom-color: #1f4e79;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sectionHeader h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #1f4e79;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.primaryBtn {
+  background: #1f4e79;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.primaryBtn:hover {
+  background: #2e86ab;
+}
+
+.exportBtn {
+  background: #27ae60;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.2s;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.exportBtn:hover {
+  background: #219a52;
+}
+
+.form {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.input {
+  padding: 0.5rem 0.75rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  flex: 1;
+  min-width: 160px;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #2e86ab;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.07);
+}
+
+.table th {
+  background: #1f4e79;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 0.65rem 1rem;
+  font-size: 0.88rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr:hover td {
+  background: #f7faff;
+}
+
+.rankCell {
+  font-weight: 700;
+  color: #1f4e79;
+  width: 60px;
+}
+
+.empty {
+  color: #888;
+}
+
+.error {
+  color: #c0392b;
+  background: #fde8e8;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+}

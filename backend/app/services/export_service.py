@@ -58,9 +58,10 @@ def build_ranked_export(
             cell = ws.cell(row=row_idx, column=col_idx, value=applicant.get(field))
             cell.fill = fill
 
-    # Auto-fit columns
-    for col_idx in range(1, len(EXPORT_COLUMNS) + 1):
-        ws.column_dimensions[get_column_letter(col_idx)].auto_size = True
+    # Set reasonable column widths
+    col_widths = [8, 14, 16, 16, 28, 28, 6, 12, 12, 8, 40]
+    for col_idx, width in enumerate(col_widths, start=1):
+        ws.column_dimensions[get_column_letter(col_idx)].width = width
 
     buffer = BytesIO()
     wb.save(buffer)
