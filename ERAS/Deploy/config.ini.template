@@ -1,0 +1,24 @@
+[Database]
+MariaDBHost     = localhost
+MariaDBPort     = 3306
+MariaDBDatabase = eras
+MariaDBUser     = eras_user
+MariaDBPassword = CHANGE_ME
+
+[Oracle]
+OracleTNS       = oracle-host:1521/ITSDB
+OracleUser      = eras_readonly
+OraclePassword  = CHANGE_ME
+OracleDirect    = True
+
+[LDAP]
+LDAPHost        = ldap://ad.corp.example.com
+LDAPDomain      = CORP
+LDAPBaseDN      = DC=corp,DC=example,DC=com
+
+[Application]
+SessionTimeout  = 480
+SnapshotMode    = True
+ReportsPath     = .\Reports\
+PythonPath      = .\python_env\
+LogPath         = .\logs\

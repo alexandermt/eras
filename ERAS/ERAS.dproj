@@ -1,0 +1,95 @@
+<Project xmlns="http://schemas.embarcadero.com/radstudio/cppbuilder/13">
+  <PropertyGroup>
+    <ProjectGuid>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</ProjectGuid>
+    <ProjectVersion>20.1</ProjectVersion>
+    <FrameworkType>None</FrameworkType>
+    <MainSource>ERAS.dpr</MainSource>
+    <Base>True</Base>
+    <Config Condition="'$(Config)'==''">Debug</Config>
+    <Platform Condition="'$(Platform)'==''">Win64</Platform>
+    <TargetedPlatforms>3</TargetedPlatforms>
+    <AppType>Application</AppType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+    <DCC_DcuOutput>.\dcu\$(Platform)\$(Config)</DCC_DcuOutput>
+    <DCC_ExeOutput>.\bin\</DCC_ExeOutput>
+    <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+    <DCC_Define>DEBUG</DCC_Define>
+    <DCC_Optimize>False</DCC_Optimize>
+    <DCC_GenerateStackFrames>True</DCC_GenerateStackFrames>
+    <DCC_DebugInfoInExe>True</DCC_DebugInfoInExe>
+    <DCC_RemoteDebug>False</DCC_RemoteDebug>
+    <SanitizeAddresses>False</SanitizeAddresses>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Config)'=='Debug' and '$(Platform)'=='Win64'">
+    <DCC_Platform>Win64</DCC_Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Config)'=='Release' and '$(Platform)'=='Win64'">
+    <DCC_Platform>Win64</DCC_Platform>
+    <DCC_Optimize>True</DCC_Optimize>
+    <DCC_DebugInfoInExe>False</DCC_DebugInfoInExe>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <ItemGroup>
+    <DelphiCompile Include="ERAS.dpr">
+      <MainSource>MainSource</MainSource>
+      <Form>ERAS</Form>
+      <BuildOrder>0</BuildOrder>
+    </DelphiCompile>
+    <DCCReference Include="DataModules\uDMMain.pas">
+      <Form>DMMain</Form>
+    </DCCReference>
+    <DCCReference Include="DataModules\uDMOracle.pas">
+      <Form>DMOracle</Form>
+    </DCCReference>
+    <DCCReference Include="DataModules\uDMWorkspace.pas">
+      <Form>DMWorkspace</Form>
+    </DCCReference>
+    <DCCReference Include="DataModules\uDMSnapshot.pas">
+      <Form>DMSnapshot</Form>
+    </DCCReference>
+    <DCCReference Include="DataModules\uDMRankings.pas">
+      <Form>DMRankings</Form>
+    </DCCReference>
+    <DCCReference Include="DataModules\uDMAudit.pas">
+      <Form>DMAudit</Form>
+    </DCCReference>
+    <DCCReference Include="Forms\uMainForm.pas">
+      <Form>MainForm</Form>
+    </DCCReference>
+    <DCCReference Include="Forms\uLoginForm.pas">
+      <Form>LoginForm</Form>
+    </DCCReference>
+    <DCCReference Include="Forms\uWorkspaceForm.pas">
+      <Form>WorkspaceForm</Form>
+    </DCCReference>
+    <DCCReference Include="Forms\uSnapshotForm.pas">
+      <Form>SnapshotForm</Form>
+    </DCCReference>
+    <DCCReference Include="Forms\uRankingForm.pas">
+      <Form>RankingForm</Form>
+    </DCCReference>
+    <DCCReference Include="Forms\uExportForm.pas">
+      <Form>ExportForm</Form>
+    </DCCReference>
+    <DCCReference Include="Core\uAppConfig.pas"/>
+    <DCCReference Include="Core\uSessionManager.pas"/>
+    <DCCReference Include="Core\uAuditLogger.pas"/>
+    <DCCReference Include="Core\uJSONHelper.pas"/>
+    <DCCReference Include="Core\uConstants.pas"/>
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+    <Borland.ProjectType>Application</Borland.ProjectType>
+    <BorlandProject>
+      <Delphi.Personality>
+        <Source>
+          <Source Name="MainSource">ERAS.dpr</Source>
+        </Source>
+      </Delphi.Personality>
+    </BorlandProject>
+    <ProjectFileVersion>12</ProjectFileVersion>
+  </ProjectExtensions>
+  <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+  <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>

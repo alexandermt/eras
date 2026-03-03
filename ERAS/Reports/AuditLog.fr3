@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ERAS AuditLog.fr3 — FastReport template
+  Audit trail report.
+  Dataset band: AuditLog (bound to DMAudit.qryAuditList)
+-->
+<TfrxReport>
+  <ReportOptions>
+    <Name>AuditLog</Name>
+    <Description>ERAS Audit Log</Description>
+  </ReportOptions>
+  <ReportPage Name="Page1" PaperWidth="297" PaperHeight="210" Orientation="1">
+    <TfrxReportTitle Name="ReportTitle1" Height="30">
+      <TfrxMemoView Name="lblTitle" Left="0" Top="0" Width="720" Height="25"
+        Text="ERAS Audit Log" Font.Size="14" Font.Style="[fsBold]"/>
+    </TfrxReportTitle>
+    <TfrxColumnHeader Name="ColumnHeader1" Height="20">
+      <TfrxMemoView Name="hOccurred"   Left="0"   Top="0" Width="130" Height="18" Text="Occurred At"  Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="hUser"       Left="135" Top="0" Width="120" Height="18" Text="User"         Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="hAction"     Left="260" Top="0" Width="130" Height="18" Text="Action"       Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="hEntityType" Left="395" Top="0" Width="90"  Height="18" Text="Entity Type"  Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="hEntityId"   Left="490" Top="0" Width="100" Height="18" Text="Entity ID"    Font.Style="[fsBold]"/>
+      <TfrxMemoView Name="hPayload"    Left="595" Top="0" Width="230" Height="18" Text="Payload"      Font.Style="[fsBold]"/>
+    </TfrxColumnHeader>
+    <TfrxMasterData Name="AuditLog" Height="16" DataSet="AuditLog">
+      <TfrxMemoView Name="fOccurred"   Left="0"   Top="0" Width="130" Height="14" Text="[AuditLog.&quot;occurred_at&quot;]"/>
+      <TfrxMemoView Name="fUser"       Left="135" Top="0" Width="120" Height="14" Text="[AuditLog.&quot;display_name&quot;]"/>
+      <TfrxMemoView Name="fAction"     Left="260" Top="0" Width="130" Height="14" Text="[AuditLog.&quot;action&quot;]"/>
+      <TfrxMemoView Name="fEntityType" Left="395" Top="0" Width="90"  Height="14" Text="[AuditLog.&quot;entity_type&quot;]"/>
+      <TfrxMemoView Name="fEntityId"   Left="490" Top="0" Width="100" Height="14" Text="[AuditLog.&quot;entity_id&quot;]"/>
+      <TfrxMemoView Name="fPayload"    Left="595" Top="0" Width="230" Height="14" Text="[AuditLog.&quot;payload&quot;]"/>
+    </TfrxMasterData>
+    <TfrxPageFooter Name="PageFooter1" Height="16">
+      <TfrxMemoView Name="fPageNum" Left="640" Top="0" Width="80" Height="14"
+        Text="Page [PAGE#] of [TOTALPAGES#]"/>
+    </TfrxPageFooter>
+  </ReportPage>
+</TfrxReport>
